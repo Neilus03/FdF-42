@@ -6,11 +6,11 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 14:09:52 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 14:20:30 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:02:02 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "includes/fdf.h"
 
 int	close_window(t_vars *vars)
 {

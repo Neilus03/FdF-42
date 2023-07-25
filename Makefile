@@ -36,14 +36,14 @@ LIBFT		=	./libft/libft.a
 LIBFT_DIR	=	./libft
 
 # MiniLibX Variables
-MLX = -lmlx -framework OpenGL -framework AppKit
-MLX_DIR = ./minilibx
+MINILIBX = ./minilibx_macos/libmlx.a
+MINILIBX_DIR = ./minilibx_macos
 
 # Source Variables
-SRC	= 
+SRC	= srcs/pruebas.c srcs/general_functions.c
 
 # Headers
-INC		=	-I. -I$(LIBFT_DIR) -I$(MLX_DIR)
+INC		=	-I. -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
 
 _SUCCESS	=	[$(GREEN)SUCCESS$(RESET)]
 _INFO		=	[$(YELLOW)INFO$(RESET)]
@@ -66,12 +66,15 @@ endif
 
 all: $(NAME)
 
-$(NAME): $(LIBFT)
-	@ $(CC) $(D_FLAG) $(CFLAGS) $(SRC) $(LIBFT) $(MLX) $(INC) -o $(NAME)
+$(NAME): $(LIBFT) $(MINILIBX)
+	@ $(CC) $(D_FLAG) $(CFLAGS) $(SRC) $(LIBFT) $(MINILIBX) $(INC) -framework OpenGL -framework AppKit -framework Cocoa -framework Foundation -o $(NAME)
 	@printf "$(_SUCCESS) $(NAME) $(_READY)\n"
 
 $(LIBFT):
 	@ $(MAKE) DEBUG=$(DEBUG) -C $(LIBFT_DIR)
+
+$(MINILIBX):
+	@ $(MAKE) -C $(MINILIBX_DIR)
 
 # Rule to clean up object files and dependencies
 clean:
@@ -81,6 +84,7 @@ clean:
 # Rule to remove the compiled library file and cleaned object files
 fclean:
 	@ $(MAKE) fclean -C $(LIBFT_DIR)
+	@ $(MAKE) clean -C $(MINILIBX_DIR)
 	@ $(RM) $(NAME)
 	@printf "$(_INFO) $(NAME) $(_REMOVED)\n"
 
@@ -88,4 +92,4 @@ fclean:
 re: fclean all
 
 # Rule to tell make that the listed targets do not correspond to actual files.
-.PHONY: all clean fclean re $(NAME) $(LIBFT)
+.PHONY: all clean fclean re $(NAME) $(LIBFT) $(MINILIBX)
