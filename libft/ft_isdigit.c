@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FdF.h                                              :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 10:25:11 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 10:32:58 by nde-la-f         ###   ########.fr       */
+/*   Created: 2023/01/13 14:58:07 by nde-la-f          #+#    #+#             */
+/*   Updated: 2023/01/13 15:46:33 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "libft.h"
 
-# include <mlx.h>
-# include <math.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
-
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
-
-#endif
+int	ft_isdigit(int c)
+{
+	if (c < '0' || c > '9')
+	{
+		return (0);
+	}
+	return (c);
+}

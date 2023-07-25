@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FdF.h                                              :+:      :+:    :+:   */
+/*   ft_print_percent.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 10:25:11 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 10:32:58 by nde-la-f         ###   ########.fr       */
+/*   Created: 2023/03/05 10:17:17 by nde-la-f          #+#    #+#             */
+/*   Updated: 2023/04/19 08:50:33 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "ft_printf.h"
 
-# include <mlx.h>
-# include <math.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
+int	ft_print_percent(void)
+{
+	ssize_t	ret;
 
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
-
-#endif
+	ret = write(1, "%", 1);
+	if (ret == -1)
+		return (-1);
+	return (1);
+}

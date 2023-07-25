@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FdF.h                                              :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 10:25:11 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 10:32:58 by nde-la-f         ###   ########.fr       */
+/*   Created: 2023/01/13 15:00:55 by nde-la-f          #+#    #+#             */
+/*   Updated: 2023/02/14 08:52:00 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "libft.h"
 
-# include <mlx.h>
-# include <math.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
-
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
-
-#endif
+int	ft_isalnum(int c)
+{
+	if ((!ft_isalpha(c)) && (!ft_isdigit(c)))
+		return (0);
+	return (1);
+}

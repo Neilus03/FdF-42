@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FdF.h                                              :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 10:25:11 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 10:32:58 by nde-la-f         ###   ########.fr       */
+/*   Created: 2023/01/17 13:54:29 by nde-la-f          #+#    #+#             */
+/*   Updated: 2023/07/22 12:02:54 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "libft.h"
+#include <ctype.h>
+#include <stdio.h>
 
-# include <mlx.h>
-# include <math.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
-
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
-
-#endif
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 'a' + 'A');
+	return (c);
+}
+/*
+int main()
+{
+	int c;
+	
+	c =  'u' ;
+	printf("\n%c -> %c",c, ft_toupper(c));
+	printf("\n%c -> %c", c, toupper(c));
+	return 0;
+}
+*/

@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FdF.h                                              :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 10:25:11 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 10:32:58 by nde-la-f         ###   ########.fr       */
+/*   Created: 2023/03/05 10:19:25 by nde-la-f          #+#    #+#             */
+/*   Updated: 2023/07/22 12:25:49 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "ft_printf.h"
 
-# include <mlx.h>
-# include <math.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
+int	ft_print_char(int c)
+{
+	ssize_t	ret;
 
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
-
-#endif
+	ret = write(1, &c, 1);
+	if (ret == -1)
+		return (-1);
+	return (1);
+}
+/*
+It checks if ret == -1 bc I was having an error when testing and trying
+this at least it was partially solved
+*/
