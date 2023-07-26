@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 19:14:13 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/26 11:18:36 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/26 12:55:20 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,9 +91,9 @@ static int	read_fdf_data(int fd, int **data, int row, int col)
 	int		cols_read;
 
 	rows_read = 0;
-	while (rows_read < row && get_next_line(fd) > 0)
+	line = get_next_line(fd);
+	while (rows_read < row && line)
 	{
-		line = get_next_line(fd);
 		split_line = ft_split(line, ' ');
 		free(line);
 		cols_read = 0;
@@ -104,7 +104,9 @@ static int	read_fdf_data(int fd, int **data, int row, int col)
 		}
 		ft_free_split(split_line);
 		rows_read++;
+		line = get_next_line(fd);
 	}
+	free(line);
 	return (rows_read);
 }
 

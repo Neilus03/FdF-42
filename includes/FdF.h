@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 10:25:11 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/26 11:46:55 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/26 13:11:25 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 # include "colors.h"
 # include "keycodes.h"
 
-# define MAX_SCALE 10.0
+# define MAX_SCALE 30.0
 # define MIN_SCALE 0.1
 
 /*---------------------------------------------------#
@@ -51,9 +51,9 @@ typedef struct s_vars {
 #---------------------------------------------------*/
 
 // READING THE FDF FILE:
-
 int		count_rows_and_cols(char *filename, int *row, int *col);
 int		**read_fdf_file(char *filename, int row, int col);
+
 // GENERAL FUNCTIONS:
 void	close_window(void);
 int		redraw(t_vars *vars);
@@ -66,5 +66,8 @@ int		key_press(int keycode, t_vars *vars);
 int		mouse_press(int button, int x, int y, t_vars *vars);
 //int	mouse_release(int button, int x, int y, t_vars *vars);
 //int	mouse_move(int x, int y, t_vars *vars);
+
+//TRANSFORMATION OPERATIONS:
+void	iso(int *x, int *y, int z);
 
 #endif
