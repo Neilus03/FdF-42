@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 19:14:13 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 20:13:07 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/26 11:18:36 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ static int	**allocate_data_matrix(int row, int col)
 {
 	int	**data;
 	int	i;
+	int	j;
 
 	data = (int **)malloc(sizeof(int *) * row);
 	if (!data)
@@ -90,7 +91,7 @@ static int	read_fdf_data(int fd, int **data, int row, int col)
 	int		cols_read;
 
 	rows_read = 0;
-	while (get_next_line(fd) > 0)
+	while (rows_read < row && get_next_line(fd) > 0)
 	{
 		line = get_next_line(fd);
 		split_line = ft_split(line, ' ');
@@ -101,7 +102,7 @@ static int	read_fdf_data(int fd, int **data, int row, int col)
 			data[rows_read][cols_read] = ft_atoi(split_line[cols_read]);
 			cols_read++;
 		}
-		free_split(split_line);
+		ft_free_split(split_line);
 		rows_read++;
 	}
 	return (rows_read);

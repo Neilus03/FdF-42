@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 10:12:14 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/22 09:13:31 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/26 11:31:36 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-size_t	ft_strlen(char *str)
+/*size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
@@ -25,6 +25,7 @@ size_t	ft_strlen(char *str)
 		i++;
 	return (i);
 }
+*/
 
 char	*read_to_remaining_str(int fd, char *remaining_str)
 {

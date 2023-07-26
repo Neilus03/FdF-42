@@ -6,12 +6,14 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 14:21:38 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 19:49:21 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/26 11:47:09 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/fdf.h"
+
 /*
+//REDRAW FOR DRAWING A LINE
 int redraw(t_vars *vars)
 {
     int x;
@@ -29,8 +31,10 @@ int redraw(t_vars *vars)
         y++;
     }
     return (0);
-}*/
+}
+*/
 
+//REDRAW FOR DRAWING A DOUGHNUT
 int	redraw(t_vars *vars)
 {
 	int x, y;
@@ -60,6 +64,48 @@ int	redraw(t_vars *vars)
 	return (0);
 }
 
+/*
+REDRAW TRYING TO READ THE FDF 
+int	redraw(t_vars *vars)
+{
+	int	plot_y;
+	int	plot_x;
+	int	x;
+	int	y; 
+
+	x = 0;
+	y = 0;
+	while (y < vars->rows)
+	{
+		x = 0;
+		while (x < vars->cols)
+		{
+			plot_x = (int)((x * vars->scale) + vars->x_offset);
+			plot_y = (int)((y * vars->scale) + vars->y_offset);
+			mlx_pixel_put(vars->mlx, vars->win, plot_x, plot_y, \
+			vars->colors[vars->color_index]);
+			x++;
+		}
+		y++;
+	}
+	return (0);
+}
+*/
+void	initialize_vars(t_vars *vars)
+{
+	vars->colors[0] = RED;
+	vars->colors[1] = GREEN;
+	vars->colors[2] = BLUE;
+	vars->colors[3] = YELLOW;
+	vars->colors[4] = MAGENTA;
+	vars->colors[5] = CYAN;
+	vars->colors[6] = WHITE;
+	vars->color_index = 0;
+	vars->scale = 1.0;
+	vars->x_offset = 0;
+	vars->y_offset = 0;
+}
+
 int	main(int argc, char **argv)
 {
 	char	*filename;
@@ -74,17 +120,7 @@ int	main(int argc, char **argv)
 	write(1, filename, ft_strlen(filename));
 	vars.mlx = mlx_init();
 	vars.win = mlx_new_window(vars.mlx, 800, 800, "FdF");
-	vars.colors[0] = RED;
-	vars.colors[1] = GREEN;
-	vars.colors[2] = BLUE;
-	vars.colors[3] = YELLOW;
-	vars.colors[4] = MAGENTA;
-	vars.colors[5] = CYAN;
-	vars.colors[6] = WHITE;
-	vars.color_index = 0;
-	vars.scale = 1.0;
-	vars.x_offset = 0;
-	vars.y_offset = 0;
+	initialize_vars(&vars);
 	redraw(&vars);
 	mlx_hook(vars.win, 2, 0, key_press, &vars);
 	mlx_mouse_hook(vars.win, mouse_press, &vars);

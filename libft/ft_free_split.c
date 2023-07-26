@@ -1,46 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_free_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 13:33:22 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/26 11:01:14 by nde-la-f         ###   ########.fr       */
+/*   Created: 2023/07/26 11:08:33 by nde-la-f          #+#    #+#             */
+/*   Updated: 2023/07/26 11:11:01 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_free_split(char **strs)
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	while (*str != '\0')
+	i = 0;
+	if (!strs)
+		return ;
+	while (strs[i])
 	{
-		len++;
-		str++;
+		free(strs[i]);
+		i++;
 	}
-	return (len);
+	free(strs);
 }
-/*
-int main()
-{
-    const char a[] = "Programs";
-    printf("%zu",ft_strlen(a));
-	printf("\n");
-    printf("%lu",strlen(a));
-
-    return 0;
-}
-*/
-/*
-1. Initialize len to 0.
-
-2. Enter a loop that continues while the character pointed to by str is not null.
-
-3. Increment len and str.
-
-4. Return len.
-*/

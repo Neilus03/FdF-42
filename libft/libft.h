@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 08:58:09 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/22 14:54:42 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/26 11:24:56 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <ctype.h>
+# include "get_next_line.h"
 
 /*LIBC FUNCTIONS*/
 /* This section contains re-implementations of standard C library functions. */
@@ -63,7 +64,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
+void	ft_free_split(char **strs);
 /*BONUS*/
 /* These functions are bonuses, which are not mandatory for the project. */
 

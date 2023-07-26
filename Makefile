@@ -22,7 +22,7 @@ CYAN = \033[96m
 CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Werror -Wall -Wextra
 
 # Command to remove files
 RM = rm -f
@@ -40,7 +40,7 @@ MINILIBX = ./minilibx_macos/libmlx.a
 MINILIBX_DIR = ./minilibx_macos
 
 # Source Variables
-SRC	= srcs/pruebas.c srcs/general_functions.c
+SRC	= srcs/pruebas.c srcs/general_functions.c srcs/read_fdf.c
 
 # Headers
 INC		=	-I. -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
