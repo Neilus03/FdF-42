@@ -35,16 +35,20 @@ RM = rm -f
 LIBFT		=	./libft/libft.a
 LIBFT_DIR	=	./libft
 
+# Printf Variables
+PRINTF		=	./ft_printf/libftprintf.a
+PRINTF_DIR	=	./ft_printf
+
 # MiniLibX Variables
 MINILIBX = ./minilibx_macos/libmlx.a
 MINILIBX_DIR = ./minilibx_macos
 
 # Source Variables
 SRC	= srcs/fdf.c srcs/general_functions.c srcs/aux.c \
-srcs/read_fdf.c srcs/transformations.c srcs/drawing.c \
+      srcs/read_fdf.c srcs/drawing.c
 
 # Headers
-INC		=	-I. -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
+INC		=	-I. -I$(LIBFT_DIR) -I$(PRINTF_DIR) -I$(MINILIBX_DIR)
 
 _SUCCESS	=	[$(GREEN)SUCCESS$(RESET)]
 _INFO		=	[$(YELLOW)INFO$(RESET)]
@@ -67,12 +71,15 @@ endif
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(MINILIBX)
-	@ $(CC) $(D_FLAG) $(CFLAGS) $(SRC) $(LIBFT) $(MINILIBX) $(INC) -framework OpenGL -framework AppKit -framework Cocoa -framework Foundation -o $(NAME)
+$(NAME): $(LIBFT) $(PRINTF) $(MINILIBX)
+	@ $(CC) $(D_FLAG) $(CFLAGS) $(SRC) $(LIBFT) $(PRINTF) $(MINILIBX) $(INC) -framework OpenGL -framework AppKit -framework Cocoa -framework Foundation -o $(NAME)
 	@printf "$(_SUCCESS) $(NAME) $(_READY)\n"
 
 $(LIBFT):
 	@ $(MAKE) DEBUG=$(DEBUG) -C $(LIBFT_DIR)
+
+$(PRINTF):
+	@ $(MAKE) DEBUG=$(DEBUG) -C $(PRINTF_DIR)
 
 $(MINILIBX):
 	@ $(MAKE) -C $(MINILIBX_DIR)
@@ -85,6 +92,7 @@ clean:
 # Rule to remove the compiled library file and cleaned object files
 fclean:
 	@ $(MAKE) fclean -C $(LIBFT_DIR)
+	@ $(MAKE) fclean -C $(PRINTF_DIR)
 	@ $(MAKE) clean -C $(MINILIBX_DIR)
 	@ $(RM) $(NAME)
 	@printf "$(_INFO) $(NAME) $(_REMOVED)\n"
@@ -93,4 +101,4 @@ fclean:
 re: fclean all
 
 # Rule to tell make that the listed targets do not correspond to actual files.
-.PHONY: all clean fclean re $(NAME) $(LIBFT) $(MINILIBX)
+.PHONY: all clean fclean re $(NAME) $(LIBFT) $(PRINTF) $(MINILIBX)
