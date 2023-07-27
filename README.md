@@ -14,6 +14,6 @@ FdF (Fils de Fer) is a project from 42 curriculum. The goal of this project is t
 ```sh
 make
 ```
-```
+```sh
 .\fdf [map_file]
 ```
