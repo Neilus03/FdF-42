@@ -6,22 +6,23 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 14:09:52 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/27 14:17:44 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/27 15:30:46 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/fdf.h"
 
-void	close_window(void)
+int	close_window(t_vars *vars)
 {
+	mlx_destroy_window(vars->mlx, vars->win);
 	exit(0);
-	return ;
+	return (0);
 }
 
 int	key_press(int keycode, t_vars *vars)
 {
 	if (keycode == MAIN_PAD_ESC)
-		close_window();
+		close_window(vars);
 	else if (keycode == MAIN_PAD_W)
 		vars->color_index = (vars->color_index + 1) % \
 		(sizeof(vars->colors) / sizeof(int));

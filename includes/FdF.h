@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 10:25:11 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/27 15:14:11 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/27 15:29:51 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int		count_rows_and_cols(char *filename, int *row, int *col);
 int		**read_fdf_file(char *filename, int row, int col);
 
 // GENERAL FUNCTIONS:
-void	close_window(void);
+int		close_window(t_vars *vars);
 void	initialize_vars(t_vars *vars);
 void	initialize_and_run_mlx(t_vars *vars);
 void	read_data_and_initialize_vars(char *filename, \

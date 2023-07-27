@@ -12,7 +12,6 @@
 **   MinilibX -  Please report bugs
 */
 
-
 /*
 ** FR msg - FR msg - FR msg
 **

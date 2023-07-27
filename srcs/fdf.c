@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 14:21:38 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/27 15:15:04 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/27 15:30:49 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	initialize_and_run_mlx(t_vars *vars)
 	redraw(vars);
 	mlx_hook(vars->win, 2, 0, key_press, vars);
 	mlx_mouse_hook(vars->win, mouse_press, vars);
+	mlx_hook(vars->win, 17, 0, close_window, vars);
 	mlx_loop(vars->mlx);
 }
 
