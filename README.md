@@ -1,6 +1,6 @@
 # FdF - 3D Wireframe Viewer
 
-![FdF Demo]<img width="767" alt="Screen Shot 2023-07-27 at 6 55 39 PM" src="https://github.com/Neilus03/FdF-42/assets/87651732/4d698bda-f5a3-494d-a9bd-94541c60739c">
+<img width="767" alt="Screen Shot 2023-07-27 at 6 55 39 PM" src="https://github.com/Neilus03/FdF-42/assets/87651732/4d698bda-f5a3-494d-a9bd-94541c60739c">
 
 
 FdF (Fils de Fer) is a project from 42 curriculum. The goal of this project is to create a simplified 3D graphic representation of a relief landscape.
