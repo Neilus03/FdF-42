@@ -40,8 +40,8 @@ MINILIBX = ./minilibx_macos/libmlx.a
 MINILIBX_DIR = ./minilibx_macos
 
 # Source Variables
-SRC	= srcs/pruebas.c srcs/general_functions.c \
-srcs/read_fdf.c srcs/transformations.c
+SRC	= srcs/fdf.c srcs/general_functions.c srcs/aux.c \
+srcs/read_fdf.c srcs/transformations.c srcs/drawing.c \
 
 # Headers
 INC		=	-I. -I$(LIBFT_DIR) -I$(MINILIBX_DIR)
