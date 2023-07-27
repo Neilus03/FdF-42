@@ -45,7 +45,7 @@ MINILIBX_DIR = ./minilibx_macos
 
 # Source Variables
 SRC	= srcs/fdf.c srcs/general_functions.c srcs/aux.c \
-      srcs/read_fdf.c srcs/drawing.c
+      srcs/read_fdf.c srcs/drawing.c srcs/color.c
 
 # Headers
 INC		=	-I. -I$(LIBFT_DIR) -I$(PRINTF_DIR) -I$(MINILIBX_DIR)

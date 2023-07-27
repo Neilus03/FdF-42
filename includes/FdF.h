@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 10:25:11 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/27 15:29:51 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/27 16:12:36 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,32 @@
 /*---------------------------------------------------#
 #              Structure definitions                 #
 #---------------------------------------------------*/
+/*
+This structure contains the minimum and maximum values of the color space
+*/
+typedef struct s_color_pair {
+	int	min;
+	int	max;
+}	t_color_pair;
 
 /*
 This structure contains the main variables about the window, map data
 colors, etc. It is passed as a parameter to the functions that need it.
 */
 typedef struct s_vars {
-	void	*mlx;
-	void	*win;
-	int		x_offset;
-	int		y_offset;
-	int		colors[7];
-	int		color_index;
-	float	scale;
-	int		**data;
-	int		rows;
-	int		cols;
-}			t_vars;
-
+	void			*mlx;
+	void			*win;
+	int				x_offset;
+	int				y_offset;
+	float			scale;
+	int				**data;
+	int				rows;
+	int				cols;
+	int				min_height;
+	int				max_height;
+	int				color_pair_index;
+	t_color_pair	color_pairs[4];
+}					t_vars;
 /*
 This structure contains the coordinates of the two points that 
 define a line. Is used in the draw_line function.
@@ -90,22 +98,20 @@ void	initialize_and_run_mlx(t_vars *vars);
 void	read_data_and_initialize_vars(char *filename, \
 									t_vars *vars, int *rows, int *cols);
 // DRAWING FUNCTIONS:
-
-int		redraw(t_vars *vars);
-void	draw_line(t_vars *vars, t_points *points, int color);
 void	handle_column_draw(t_vars *vars, t_points *points, int row, int col);
 void	handle_row_draw(t_vars *vars, t_points *points, int row, int col);
+void	draw_line(t_vars *vars, t_points *points, int color);
+int		redraw(t_vars *vars);
+
+// COLORING FUNCTIONS:
+int		generate_color(t_vars *vars, int height);
+void	find_height_range(t_vars *vars);
 
 //KEYBOARD OPERATIONS:
 int		key_press(int keycode, t_vars *vars);
 
 // MOUSE OPERATIONS:
 int		mouse_press(int button, int x, int y, t_vars *vars);
-//int	mouse_release(int button, int x, int y, t_vars *vars);
-//int	mouse_move(int x, int y, t_vars *vars);
-
-//TRANSFORMATION OPERATIONS:
-void	iso(int *x, int *y, int z);
 
 //AUXILIARY FUNCTIONS:
 int		abs(int n);

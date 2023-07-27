@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:26:06 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/25 13:26:07 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/27 16:13:01 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,4 @@
 # define MAGENTA 0xFF00FF
 # define CYAN    0x00FFFF
 # define WHITE   0xFFFFFF
-
 #endif

@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:03:40 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/27 14:16:36 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/27 15:54:23 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	handle_row_draw(t_vars *vars, t_points *points, int row, int col)
 		+ vars->x_offset) * vars->scale);
 		points->y2 = (int)(((-vars->data[row][col + 1] + (row + (col + 1)) \
 		* sin(0.523599)) * norm_factor + vars->y_offset) * vars->scale);
-		draw_line(vars, points, vars->colors[vars->color_index]);
+		draw_line(vars, points, generate_color(vars, vars->data[row][col]));
 	}
 }
 
@@ -90,7 +90,7 @@ void	handle_column_draw(t_vars *vars, t_points *points, int row, int col)
 		+ vars->x_offset) * vars->scale);
 		points->y2 = (int)(((-vars->data[row + 1][col] + ((row + 1) + col) \
 		* sin(0.523599)) * norm_factor + vars->y_offset) * vars->scale);
-		draw_line(vars, points, vars->colors[vars->color_index]);
+		draw_line(vars, points, generate_color(vars, vars->data[row][col]));
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 14:21:38 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/27 15:30:49 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/27 16:18:44 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,11 @@ void	initialize_vars(t_vars *vars)
 	float	norm_factor;
 
 	norm_factor = WIN_SIZE / (max(vars->rows, vars->cols) * sqrt(2.0));
-	vars->colors[0] = RED;
-	vars->colors[1] = GREEN;
-	vars->colors[2] = BLUE;
-	vars->colors[3] = YELLOW;
-	vars->colors[4] = MAGENTA;
-	vars->colors[5] = CYAN;
-	vars->colors[6] = WHITE;
-	vars->color_index = 0;
+	vars->color_pair_index = 0;
+	vars->color_pairs[0] = (t_color_pair){BLUE, RED};
+	vars->color_pairs[1] = (t_color_pair){GREEN, YELLOW};
+	vars->color_pairs[2] = (t_color_pair){MAGENTA, CYAN};
+	vars->color_pairs[3] = (t_color_pair){RED, WHITE};
 	vars->scale = 1;
 	vars->x_offset = WIN_SIZE / 2;
 	vars->y_offset = WIN_SIZE / 2;
@@ -46,7 +43,10 @@ void	read_data_and_initialize_vars(char *filename, t_vars *vars, \
 	}
 	vars->rows = *rows;
 	vars->cols = *cols;
+	vars->min_height = 0;
+	vars->max_height = 0;
 	initialize_vars(vars);
+	find_height_range(vars);
 }
 
 void	initialize_and_run_mlx(t_vars *vars)

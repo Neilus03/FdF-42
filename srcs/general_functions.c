@@ -6,7 +6,7 @@
 /*   By: nde-la-f <nde-la-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 14:09:52 by nde-la-f          #+#    #+#             */
-/*   Updated: 2023/07/27 15:30:46 by nde-la-f         ###   ########.fr       */
+/*   Updated: 2023/07/27 16:08:16 by nde-la-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	key_press(int keycode, t_vars *vars)
 	if (keycode == MAIN_PAD_ESC)
 		close_window(vars);
 	else if (keycode == MAIN_PAD_W)
-		vars->color_index = (vars->color_index + 1) % \
-		(sizeof(vars->colors) / sizeof(int));
+		vars->color_pair_index = (vars->color_pair_index + 1) % \
+		(sizeof(vars->color_pairs) / sizeof(t_color_pair));
 	else if (keycode == ARROW_UP)
 		vars->y_offset -= 10;
 	else if (keycode == ARROW_DOWN)
