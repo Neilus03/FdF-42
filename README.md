@@ -1,6 +1,6 @@
 # FdF - 3D Wireframe Viewer
 
-<img width="767" alt="Screen Shot 2023-07-27 at 6 55 39 PM" src="https://github.com/Neilus03/FdF-42/assets/87651732/4d698bda-f5a3-494d-a9bd-94541c60739c">
+<img width="350" alt="Screen Shot 2023-07-27 at 6 55 39 PM" src="https://github.com/Neilus03/FdF-42/assets/87651732/4d698bda-f5a3-494d-a9bd-94541c60739c">
 
 
 ## Description
