@@ -1,7 +1,7 @@
 # 🌍 FdF - Explore 3D Wireframe Landscapes!
 Welcome to **FdF**! This is a 42 project, and it allows you to visualize 3D landscapes from a 2D representation, bringing the map to life right on your screen.
 <div align="center">
-    <img width="350" alt="outputted image when using pylone.fdf map" src="https://github.com/Neilus03/FdF-42/assets/87651732/4d698bda-f5a3-494d-a9bd-94541c60739c">
+    <img width="350" alt="output image when using pylone.fdf map" title="output image when using pylone.fdf map" src="https://github.com/Neilus03/FdF-42/assets/87651732/4d698bda-f5a3-494d-a9bd-94541c60739c">
 </div>
 
 
