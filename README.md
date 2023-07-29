@@ -29,28 +29,28 @@ make
 
 This project is divided into several parts:
 
-    libft: Contains utility functions used throughout the project.
-    ft_printf: Contains a function to print formatted output to the stdout.
-    minilibx_macos: Contains functions to handle graphics.
-    srcs: Contains the main logic of the project.
-    includes: Contains the header files.
+- libft: Contains utility functions used throughout the project.
+- ft_printf: Contains a function to print formatted output to the stdout.
+- minilibx_macos: Contains functions to handle graphics.
+- srcs: Contains the main logic of the project.
+- includes: Contains the header files.
 
 ## Files
 
 The main files of the project are located inside the srcs and includes folders. Here is a brief description of them:
 srcs
 
-    color.c: Functions to generate colors based on height.
-    drawing.c: Functions to draw lines and handle drawing for rows and columns.
-    fdf.c: Main function to initialize variables and run mlx.
-    general_functions.c: General functions including closing window, key press, and mouse press.
-    read_fdf.c: Functions to read the FdF file and create a 2D array with the data.
+- color.c: Functions to generate colors based on height.
+- drawing.c: Functions to draw lines and handle drawing for rows and columns.
+- fdf.c: Main function to initialize variables and run mlx.
+- general_functions.c: General functions including closing window, key press, and mouse press.
+- read_fdf.c: Functions to read the FdF file and create a 2D array with the data.
 
 ## includes
 
-    colors.h: Defines color codes.
-    fdf.h: Contains all the structure definitions and function prototypes used in the project.
-    keycodes.h: Defines key codes.
+- fdf.h: Contains all the structure definitions and function prototypes used in the project.
+- colors.h: Defines color codes.
+- keycodes.h: Defines key codes.
 
 ## Example Maps
 
