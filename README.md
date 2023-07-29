@@ -24,6 +24,7 @@ Ready to explore? Here's how you start your journey:
 2. Run FdF with a map file of your choice.
 
     ```sh
+
     ./fdf [map_file]
     ```
 
@@ -94,6 +95,11 @@ Once we have the 2D array, it's time to bring it to life! This is where `drawing
 Finally, the `general_functions.c` handles all the interactions with the 3D landscape. It captures the keyboard and mouse inputs and manipulates the landscape accordingly, allowing you to explore it from different angles and perspectives.
 
 And that's how FdF brings 3D landscapes to life! Feel free to dive into the code and explore more. Happy coding! 🚀
+
+### Result
+
+As you can see, this would be the result for this simple fdf map
+![gx](https://github.com/Neilus03/FdF-42/assets/87651732/1eaeaf47-59f6-4cbb-9850-d01baadb9100)
 
 
 ## 🗺️ Example Maps
