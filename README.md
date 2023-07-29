@@ -98,7 +98,12 @@ And that's how FdF brings 3D landscapes to life! Feel free to dive into the code
 
 ### Result
 
-As you can see, this would be the result for this simple fdf map
+As you can see, this would be the result for this simple fdf map:
+
+<div align="center">
+    <img width="350" alt="Screen Shot 2023-07-27 at 6 55 39 PM" src="https://github.com/Neilus03/FdF-42/assets/87651732/1eaeaf47-59f6-4cbb-9850-d01baadb9100">
+</div>
+
 ![gx](https://github.com/Neilus03/FdF-42/assets/87651732/1eaeaf47-59f6-4cbb-9850-d01baadb9100)
 
 
