@@ -61,6 +61,19 @@ Let's take a closer look at the key players of the project, located inside the `
 - **colors.h:** The color palette. Defines color codes.
 - **keycodes.h:** The keyboard map. Defines key codes.
 
+## 🎩 How It Works
+
+Welcome to the backstage! Let's pull back the curtain and see how the magic happens.
+
+### The Map
+
+The first step in visualizing a 3D landscape is understanding the map. The map is a 2D representation of the landscape, where each point represents a coordinate on the Z-axis. For example, take a look at this simple 3x3 map:
+´´´sh
+0 3 0
+3 0 3
+0 3 0
+´´´
+
 ## 🗺️ Example Maps
 
 Ready to start your adventure? You can find example maps in the `test_maps` folder.
