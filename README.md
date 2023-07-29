@@ -21,9 +21,9 @@ make
 ```
 ## Controls
 
-    Zoom in/out: Scroll up/down.
-    Move: Arrow keys.
-    Change color: W key.
+    -Zoom in/out: Scroll up/down.
+    -Move: Arrow keys.
+    -Change color: W key.
 
 ## Project structure
 
