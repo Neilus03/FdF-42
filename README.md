@@ -7,7 +7,7 @@ Welcome to **FdF**! This project is a part of the rigorous 42 curriculum, and it
 
 ## 🚀 Features
 
-- 🌐 **Real-time Interaction:** Rotate, zoom in and out, and shift the map using just your keyboard and mouse.
+- 🌐 **Real-time Interaction:** Translate, zoom in and out, and shift the map using just your keyboard and mouse.
 - 🎨 **Dynamic Colors:** Change color gradients on the fly.
 
 ## 🛠️ Usage
