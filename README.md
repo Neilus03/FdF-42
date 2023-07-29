@@ -112,4 +112,4 @@ Ready to start your adventure? You can find example maps in the `test_maps` fold
 
 Neil de la Fuente
 
-Dive in, explore, and enjoy the landscapes!
+## Dive in, explore, and enjoy the landscapes! 🌍
