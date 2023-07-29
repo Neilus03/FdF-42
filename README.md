@@ -68,11 +68,33 @@ Welcome to the backstage! Let's pull back the curtain and see how the magic happ
 ### The Map
 
 The first step in visualizing a 3D landscape is understanding the map. The map is a 2D representation of the landscape, where each point represents a coordinate on the Z-axis. For example, take a look at this simple 3x3 map:
-´´´sh
+```sh
 0 3 0
 3 0 3
 0 3 0
-´´´
+```
+
+
+This map represents a 3D landscape with a peak in the middle.
+
+### Reading the Map
+
+The `read_fdf.c` file is responsible for reading the map. It parses the map file and creates a 2D array that represents the map. Each cell in the array corresponds to a point in the 3D space with its Z coordinate.
+
+### Drawing the Landscape
+
+Once we have the 2D array, it's time to bring it to life! This is where `drawing.c` comes into play. It takes the 2D array and starts drawing lines between the points, creating a wireframe representation of the landscape.
+
+### Coloring the Landscape
+
+`color.c` adds the final touch to our 3D landscape by coloring it. It uses the Z coordinate of each point to determine its color, creating a sense of depth and relief.
+
+### Interacting with the Landscape
+
+Finally, the `general_functions.c` handles all the interactions with the 3D landscape. It captures the keyboard and mouse inputs and manipulates the landscape accordingly, allowing you to explore it from different angles and perspectives.
+
+And that's how FdF brings 3D landscapes to life! Feel free to dive into the code and explore more. Happy coding! 🚀
+
 
 ## 🗺️ Example Maps
 
