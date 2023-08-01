@@ -100,5 +100,5 @@ fclean:
 # Rule to completely rebuild the program from scratch
 re: fclean all
 
-# Rule to tell make that the listed targets do not correspond to actual files.
+# Rule for telling make that the listed targets do not correspond to actual files.
 .PHONY: all clean fclean re $(NAME) $(LIBFT) $(PRINTF) $(MINILIBX)
